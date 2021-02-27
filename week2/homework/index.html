@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta2 - Classroom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" alt="logo_img">
+                <h2>Hafta 2 Classroom Ödevi - Cevap Dökümanı</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <h4 class="mb-1">Soru 1</h4>
+                    <h6 class="mb-3">mycarDetails fonksiyonunu "GA12345 Toyota" ciktisini verecek sekilde duzenleyin.</h6>
+                    <span class="mb-1 badge bg-secondary">Cevap(lar):</span>
+                    <pre>
+//Seçenek1 -> Bind
+//var myCarDetails = car.displayDetails.bind(car);
+
+//Seçenek2 -> Arrow Funtion
+var myCarDetails = () => car.displayDetails();</pre>
+                    <span class="mb-1 badge bg-success">Çıktı:</span>
+                    <pre id="q1_answer"></pre>
+                    <hr>
+                    <h4 class="mb-1">Soru 2</h4>
+                    <h6 class="mb-3">name parametresi alan bir isValidName fonksiyonu yazin. Fonksiyon asagidaki kosullarin hepsi saglaniyorsa true, saglanmiyorsa false donmelidir:<br>name string olmali<br>name bos olmamali bosluk icerebilir,<br>ancak bosluk haridcindeki
+                        isimler en az 2 karakterden olusmali.</h6>
+                    <span class="mb-1 badge bg-secondary">Cevap:</span>
+                    <pre class="mt-2">
+return typeof(name) === "string" && name.replace(/\s/g, "").length > 1;
+
+// Gelen değerin string olup olmadığı kontrol edilir,<br>ardından name değerindeki tüm boşluk karakterleri silinir ve kalan değerin uzunluğununun 1'den büyük olup olmadığına bakılır (>=2). 
+// RegEx'teki \s ->boşluk karakterleri ile eşleştirme ; g -> global search(tüm string'i tarama) için kullanılır.</pre>
+                    <span class="mb-1 badge bg-success">Çıktı:</span>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <span class="input-group-text">1</span>
+                                <input type="text" class="form-control" id="test_case" placeholder="name" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <button id="add_test" class="btn btn-primary">Test Et</button>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                            <ul id="q2_answer">
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4 class="mb-1">Soru 3</h4>
+                    <h6 class="mb-3">summary fonkisyonunu ciktisi "Brave New World was written by Aldous Huxley. It is a dystopian novel written in 1932." olacak sekilde cagirin.</h6>
+                    <span class="mb-1 badge bg-secondary">Cevap:</span>
+                    <pre class="m-0">summary.call(book, 'dystopian', '1932')</pre>
+                    <span class="mt-2 badge bg-success">Çıktı:</span>
+                    <pre id="q3_answer"></pre>
+                </div>
+            </div>
+        </main>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">Hidayet Arasan</p>
+        </footer>
+    </div>
+    <script src="sheet.js"></script>
+</body>
+
+</html>
