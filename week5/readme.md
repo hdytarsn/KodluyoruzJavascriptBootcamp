@@ -1,4 +1,4 @@
-<h6>Haftalık Gelişmeler:</h6>
+<b>Haftalık Gelişmeler:</b>
 Aktif olarak NPM kullanımı ve NPM paketleri incelendi.<br>
 Api üzerinden verileri alma, api'ye veri gönderme ve programla senkron hale getirme üzerine verilen pomodoro ödevi tamamlandı.
 <br>
